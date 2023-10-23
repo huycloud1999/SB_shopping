@@ -1,0 +1,267 @@
+.container {
+  margin-bottom: 2rem;
+  .grid-container {
+    display: grid;
+    height: 40rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "one two four"
+      "one two four-low";
+    gap: 1.3rem;
+    .grid-one {
+      position: relative;
+      cursor: pointer;
+      grid-area: one;
+      .lil-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      p {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+    .grid-two {
+      grid-area: two;
+      cursor: pointer;
+      position: relative;
+      .lil-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      p {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+    .grid-threeUp {
+      grid-area: four;
+      cursor: pointer;
+      position: relative;
+      .lil-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+      }
+      p {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .grid-threeLow {
+      grid-area: four-low;
+      cursor: pointer;
+      position: relative;
+      .lil-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+      }
+      p {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    .grid-container {
+      .grid-one {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 2rem;
+        }
+      }
+      .grid-two {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 2rem;
+        }
+      }
+      .grid-threeLow {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 2rem;
+        }
+      }
+      .grid-threeUp {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    .grid-container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "one two"
+        "four four-low";
+      grid-gap: 13px;
+      gap: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    .grid-container {
+      .grid-one {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    .grid-container {
+      .grid-one {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 3rem;
+        }
+      }
+      .grid-two {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 3rem;
+        }
+      }
+      .grid-threeLow {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 3rem;
+        }
+      }
+      .grid-threeUp {
+        p {
+          bottom: 1rem;
+          left: 1rem;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    .grid-container {
+      .grid-one {
+        p {
+          bottom: 1rem;
+          left: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+      .grid-two {
+        p {
+          bottom: 1rem;
+          left: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+      .grid-threeLow {
+        p {
+          bottom: 1rem;
+          left: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+      .grid-threeUp {
+        p {
+          bottom: 1rem;
+          left: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

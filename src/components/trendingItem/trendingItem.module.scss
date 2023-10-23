@@ -1,0 +1,52 @@
+.trending {
+  margin-top: 2rem;
+  margin-top: 2rem;
+  .container {
+    .titleBtns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .btns {
+        display: flex;
+        gap: 1rem;
+        button {
+          color: white;
+          background-color: #373737;
+          padding: 0.5rem;
+          font-size: 1.5rem;
+          border: none;
+          height: 3rem;
+          width: 3rem;
+          cursor: pointer;
+          transition: all 0.1s ease-in;
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .row-container {
+      display: flex;
+      gap: 2.2rem;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      position: relative;
+      padding: 1rem 0.6rem;
+      &::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+  }
+}
