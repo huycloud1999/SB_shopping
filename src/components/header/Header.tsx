@@ -12,11 +12,6 @@ import AuthLink from "../authLink/AuthLink";
 import ShoppingCart from "../shopingCart/ShoppingCart";
 
 const Header = () => {
-  const [activeMenu, setActiveMenu] = useState("Home");
-
-  const handleMenuClick = (menu: any) => {
-    setActiveMenu(menu);
-  };
   return (
     <div className={styles["container"]}>
       <div className={styles["socials"]}>
@@ -28,38 +23,19 @@ const Header = () => {
       <div className={styles["logo"]}>SieuBuong.</div>
       <div className={styles["links"]}>
         <ThemeToggle />
-        <Link
-          href="/"
-          className={activeMenu === "Home" ? styles["active"] : styles["link"]}
-          onClick={() => handleMenuClick("Home")}
-        >
+        <Link href="/" className={styles["link"]}>
           Home
         </Link>
-        <Link
-          href="/"
-          className={
-            activeMenu === "Categories" ? styles["active"] : styles["link"]
-          }
-          onClick={() => handleMenuClick("Categories")}
-        >
+        <Link href="/" className={styles["link"]}>
           Categories
         </Link>
-        <Link
-          href="/"
-          className={
-            activeMenu === "Contact" ? styles["active"] : styles["link"]
-          }
-          onClick={() => handleMenuClick("Contact")}
-        >
+        <Link href="/" className={styles["link"]}>
           Contact
         </Link>
-        <Link
-          href="/"
-          className={activeMenu === "About" ? styles["active"] : styles["link"]}
-          onClick={() => handleMenuClick("About")}
-        >
+        <Link href="/about" className={styles["link"]}>
           About
         </Link>
+
         <ShoppingCart />
         <AuthLink />
       </div>

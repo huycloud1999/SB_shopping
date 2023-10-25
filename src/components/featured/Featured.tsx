@@ -13,7 +13,7 @@ const Featured: React.FC = () => {
         <div className={styles["grid-one"]}>
           <Link href="/">
             <div className={styles["lil-overlay"]}></div>
-            <Image src={img} alt="featured" />
+            <Image src={img} alt="featured" priority />
             <p>Live Comfortably</p>
           </Link>
         </div>

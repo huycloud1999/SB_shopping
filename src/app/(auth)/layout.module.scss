@@ -1,0 +1,35 @@
+.auth-container {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  height: 40rem;
+  .formSide {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imageSide {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .auth-container {
+    .formSide {
+      width: 100%;
+    }
+    .imageSide {
+      display: none;
+    }
+  }
+}

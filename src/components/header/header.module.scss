@@ -22,9 +22,7 @@
     flex: 1;
     font-size: 20px;
     align-items: center;
-    .active {
-      font-weight: bold;
-    }
+
     .link {
       box-shadow: inset 0 0 0 0 var(--textColor);
       padding: 0.25rem;
@@ -59,15 +57,12 @@
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   .container {
     .logo {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
-  }
-}
-@media screen and (max-width: 640px) {
-  .container {
     .links {
       justify-content: flex-end;
     }
