@@ -4,6 +4,8 @@ import Footer from "@/components/footer/Footer";
 import "./globals.css";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemProvider from "@/providers/ThemProvider";
+import { ReduxProvider } from "@/providers/Provider";
+
 export const metadata: Metadata = {
   title: "SieuBuong",
   description: "Shopping",
@@ -25,7 +27,7 @@ export default function RootLayout({
             <div className="container">
               <div className="wrapper">
                 <Header />
-                {children}
+                <ReduxProvider>{children}</ReduxProvider>
                 <Footer />
               </div>
             </div>

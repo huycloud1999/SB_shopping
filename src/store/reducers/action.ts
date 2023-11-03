@@ -1,0 +1,1 @@
+export const GET_TOKEN_LOGIN = 'GET_TOKEN_LOGIN';

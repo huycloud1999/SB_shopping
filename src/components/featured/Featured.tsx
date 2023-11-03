@@ -11,28 +11,28 @@ const Featured: React.FC = () => {
     <div className={styles["container"]}>
       <div className={styles["grid-container"]}>
         <div className={styles["grid-one"]}>
-          <Link href="/">
+          <Link href="/categories">
             <div className={styles["lil-overlay"]}></div>
             <Image src={img} alt="featured" priority />
             <p>Live Comfortably</p>
           </Link>
         </div>
         <div className={styles["grid-two"]}>
-          <Link href="/">
+          <Link href="/categories">
             <div className={styles["lil-overlay"]}></div>
             <Image src={img2} alt="featured" />
             <p>Skincare</p>
           </Link>
         </div>
         <div className={styles["grid-threeUp"]}>
-          <Link href="/">
+          <Link href="/categories">
             <div className={styles["lil-overlay"]}></div>
             <Image src={img3} alt="featured" />
             <p>Kitchen</p>
           </Link>
         </div>
         <div className={styles["grid-threeLow"]}>
-          <Link href="/">
+          <Link href="/categories">
             <div className={styles["lil-overlay"]}></div>
             <Image src={img4} alt="featured" />
             <p>Electronics</p>

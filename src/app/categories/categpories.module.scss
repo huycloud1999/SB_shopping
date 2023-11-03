@@ -1,0 +1,60 @@
+.container {
+  margin-top: 2rem;
+  .header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 6rem;
+    width: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        font-size: 1.6rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+        @media screen and (max-width: 676px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+      @media screen and (max-width: 676px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .filter {
+    width: 100%;
+    margin-bottom: 2rem;
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--textColor);
+      li {
+        border: 1px solid var(--textColor);
+        padding: 5px 10px;
+        transition: 0.5s ease;
+        background: linear-gradient(to right, #ccc 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.3s ease;
+        color: black;
+        cursor: pointer;
+        &:hover {
+          background-position: left bottom;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+.container {
+  margin-top: 2rem;
+  .productZone {
+    .productZoneTop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+      .productZoneTopLeft {
+        width: 100%;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 2rem;
+        }
+        .bigImage {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.2rem;
+          img {
+            width: 75%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .smallImage {
+          width: 100%;
+          display: flex;
+          gap: 1.2rem;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 22%;
+            height: 20%;
+            padding: 5px;
+            object-fit: cover;
+            cursor: pointer;
+            &:hover {
+              outline: 1px solid rgba(0, 0, 0, 0.3);
+              -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
+              -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
+              box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.18);
+            }
+          }
+        }
+      }
+      .productZoneTopRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media screen and (max-width: 768px) {
+          gap: 1rem;
+        }
+        h2 {
+          font-size: 3rem;
+          @media screen and (max-width: 1280px) {
+            font-size: 2.5rem;
+          }
+        }
+        p {
+          font-size: 1.5rem;
+        }
+        .price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            font-size: 2rem;
+            @media screen and (max-width: 1280px) {
+              font-size: 1.5rem;
+            }
+          }
+          .countItem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            .btnCount {
+              border: none;
+              width: 3rem;
+              height: 3rem;
+              background-color: transparent;
+              font-size: 2rem;
+              cursor: pointer;
+              color: var(--textColor);
+            }
+            .count {
+              display: flex;
+              color: black;
+              align-items: center;
+              justify-content: center;
+              background-color: #eaeeff;
+              width: 3rem;
+              height: 3rem;
+              font-size: 1.5rem;
+            }
+          }
+          .prices {
+            font-size: 2rem;
+            @media screen and (max-width: 1280px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .btnShopping {
+          margin-top: 2rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+          @media screen and (max-width: 1280px) {
+            grid-template-columns: 1fr;
+          }
+          button {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.5rem;
+            padding: 1rem;
+            cursor: pointer;
+            color: var(--textColor);
+            font-weight: bold;
+            border: 1px solid var(--textColor);
+            border-radius: 4px;
+            @media screen and (max-width: 1280px) {
+              font-size: 1rem;
+            }
+            &:first-child {
+              background-color: transparent;
+              &:hover {
+                background-color: var(--textColor);
+                color: var(--bg);
+              }
+            }
+            &:last-child {
+              background-color: #b6002c;
+              color: white;
+              &:hover {
+                background-color: transparent;
+                color: var(--textColor);
+              }
+            }
+          }
+        }
+      }
+    }
+    .productZoneBot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .detailItem {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #ccc;
+        color: black;
+        padding: 1rem;
+        width: 30%;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

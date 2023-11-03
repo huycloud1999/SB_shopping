@@ -5,8 +5,16 @@ import gg from "@/assets/imgs/socials/google-logo-9808.png";
 import fb from "@/assets/imgs/socials/fb.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { getTokenLogin } from "@/store/reducers/auth/sign-in/withGoogle";
 const SignIn: React.FC = () => {
   const text: String = "Don't have an account?";
+
+  const dispatch = useDispatch();
+  const handleSiginIN = () => {
+    window.location.href = "http://localhost:8000/api/v1/auth/google";
+    dispatch(getTokenLogin());
+  };
   return (
     <div className={styles["login-container"]}>
       <div className={styles["text"]}>
@@ -32,7 +40,7 @@ const SignIn: React.FC = () => {
           <div className={styles["line"]}></div>
         </div>
         <div className={styles["ggfb"]}>
-          <button>
+          <button onClick={handleSiginIN}>
             <Image src={gg} alt="gg" width={24} height={24} />
             <span>Sign in with Google</span>
           </button>

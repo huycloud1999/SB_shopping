@@ -40,7 +40,7 @@ const AuthLink: React.FC = () => {
           <Link href="/">Home</Link>
           <Link href="/">Contact</Link>
           <Link href="/about">About</Link>
-          <Link href="/">Catrgories</Link>
+          <Link href="/categories">Categories</Link>
           {status === "notauthenticated" ? (
             <Link href="/login">Login</Link>
           ) : (

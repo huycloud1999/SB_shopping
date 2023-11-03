@@ -8,6 +8,9 @@ const nextConfig = {
       "media.istockphoto.com",
       "www.nj.com",
       "lh3.googleusercontent.com",
+      "cdn.vjshop.vn",
+      "bizweb.dktcdn.net",
+      "localhost",
     ],
   },
   webpack: (config) => {
