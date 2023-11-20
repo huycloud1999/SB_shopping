@@ -10,7 +10,16 @@ const Product: React.FC = () => {
   const [image, setImage] = useState<any>(
     "https://cdn.vjshop.vn/may-anh/mirrorless/sony/sony-alpha-a7-mark-iii/sony-alpha-a7-mark-iii8.jpg"
   );
+  const [total, setTotal] = useState<number>(0);
+  const handleDecrease: () => void = () => {
+    if (total > 0) {
+      setTotal(total - 1);
+    }
+  };
 
+  const handleIncrease: () => void = () => {
+    setTotal(total + 1);
+  };
   const changeImage = (e: MouseEvent<HTMLImageElement>) => {
     const target = e.target as HTMLImageElement;
 
@@ -60,11 +69,15 @@ const Product: React.FC = () => {
             <div className={styles.price}>
               <h3>Quatity</h3>
               <div className={styles.countItem}>
-                <button className={styles.btnCount}>-</button>
-                <div className={styles.count}>0</div>
-                <button className={styles.btnCount}>+</button>
+                <button className={styles.btnCount} onClick={handleDecrease}>
+                  -
+                </button>
+                <div className={styles.count}>{total}</div>
+                <button className={styles.btnCount} onClick={handleIncrease}>
+                  +
+                </button>
               </div>
-              <div className={styles.prices}>100 $</div>
+              <div className={styles.prices}>{100 * total} $</div>
             </div>
             <div className={styles.btnShopping}>
               <button>
