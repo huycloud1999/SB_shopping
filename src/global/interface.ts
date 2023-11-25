@@ -1,3 +1,15 @@
+import { CLOSE_MODAL,OPEN_MODAL } from "@/store/reducers/action";
+export const openModal = () => {
+    return {
+      type: OPEN_MODAL,
+    } as const;
+  };
+  
+  export const closeModal = () => {
+    return {
+      type: CLOSE_MODAL,
+    } as const;
+  };
 export interface Action {
     isLoading?: boolean;
         componentId?: string;

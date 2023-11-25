@@ -11,6 +11,7 @@ const nextConfig = {
       "cdn.vjshop.vn",
       "bizweb.dktcdn.net",
       "localhost",
+      "image.anhducdigital.vn",
     ],
   },
   webpack: (config) => {

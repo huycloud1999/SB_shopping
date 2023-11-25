@@ -24,13 +24,15 @@ export default function RootLayout({
       <body>
         <ThemeContextProvider>
           <ThemProvider>
-            <div className="container">
-              <div className="wrapper">
-                <Header />
-                <ReduxProvider>{children}</ReduxProvider>
-                <Footer />
+            <ReduxProvider>
+              <div className="container">
+                <div className="wrapper">
+                  <Header />
+                  {children}
+                  <Footer />
+                </div>
               </div>
-            </div>
+            </ReduxProvider>
           </ThemProvider>
         </ThemeContextProvider>
       </body>

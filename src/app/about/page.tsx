@@ -1,10 +1,16 @@
-import Loading from "@/components/Loading/Loading";
+"use client";
 import React from "react";
-
+import Cart from "@/components/Cart/Cart";
+import { RootState } from "@/store";
+import { useSelector } from "react-redux";
 const About: React.FC = () => {
+  const isModalOpen = useSelector(
+    (state: RootState) => state.modal.isModalOpen
+  );
   return (
     <div>
-      <Loading />
+      About me
+      {isModalOpen && <Cart />}
     </div>
   );
 };

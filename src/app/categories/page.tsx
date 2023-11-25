@@ -4,10 +4,14 @@ import styles from "@/app/categories/categpories.module.scss";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Link from "next/link";
 import FilterItem from "@/components/filterItem/FilterItem";
-
+import Cart from "@/components/Cart/Cart";
+import { RootState } from "@/store";
+import { useSelector } from "react-redux";
 const Categories: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("Categories");
-
+  const isModalOpen = useSelector(
+    (state: RootState) => state.modal.isModalOpen
+  );
   const handleCategoryClick = (category: string) => {
     setSelectedCategory(category);
   };
@@ -37,6 +41,7 @@ const Categories: React.FC = () => {
       <div className="item-container">
         <FilterItem />
       </div>
+      {isModalOpen && <Cart />}
     </div>
   );
 };
